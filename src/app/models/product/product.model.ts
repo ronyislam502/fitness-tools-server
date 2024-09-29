@@ -34,7 +34,10 @@ export const productSchema = new Schema<TProduct, ProductModel>(
       type: String,
       required: true,
     },
-    inventory: inventorySchema,
+    inventory: {
+      type: inventorySchema,
+      required: true,
+    },
     isDeleted: {
       type: Boolean,
       default: false,
